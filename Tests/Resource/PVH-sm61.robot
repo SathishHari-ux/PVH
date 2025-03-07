@@ -35,6 +35,6 @@ PVH-sm61
     Take Screenshot    013_sm61_02.jpg
     Sleep    1
     Merger.Copy Images    ${OUTPUT_DIR}    ${symvar('PVH_Target_Dir')}
-    Sleep    1
+    Sleep    5
     Images To Pdf    image_folder=${symvar('PVH_Target_Dir')}    output_pdf=${symvar('PVH_Target_Dir')}//${symvar('PVH_PDFFILE_NAME')}
     Sleep	1
