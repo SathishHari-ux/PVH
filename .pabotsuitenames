@@ -1,9 +1,5 @@
-datasources:2b4ed0fa4292553d9c1c01e65da2fd0f68ff11e8
-commandlineoptions:ca15888846d898862578d22912447f8482821555
+datasources:83d15229c9ef3a041d8e2dc92d9fd59f61d181d7
+commandlineoptions:7c313c949c38a49d9da8612af6d4ef977fd9d0e0
 suitesfrom:no-suites-from-option
-file:1d8a51a7eee2454a398ee10fc3cc75c09533c356
---suite Tests.Sample.AAAA-123 Hello World User Story
---suite Tests.Sample.AAAA-124 User Story to test selenium navigation
---suite Tests.Sample.AAAA-125 Calculator app tests
---suite Tests.Sample.AAAA-126 Template Calculator Test
---suite Tests.Sample.Datadriver.Test
+file:108cc221f25c69132105ae7cc3e4b8d6de4699c9
+--suite Tests.Test PVH-st06

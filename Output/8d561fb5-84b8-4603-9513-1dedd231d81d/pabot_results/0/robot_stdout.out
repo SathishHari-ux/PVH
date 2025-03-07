@@ -1,0 +1,117 @@
+==============================================================================
+Tests :: Testing functionality through Robot Framework                        
+==============================================================================
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\__init__.robot:3
+      Setup highest level suite    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\__init__.robot:12
+      Setup linux execution    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Support.robot:63
+      Run Keyword If    ${web_test_check}    Setup Docker Execution Options
+      |  ${web_test_check} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  None:0
+      Setup Docker Execution Options    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Web\Support_Web.robot:32
+      Setup Suite Metadata    ${browser}
+      |  ${browser} = chrome (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Web\Support_Web.robot:26
+      Get Browser Metadata    browser=${browser}
+      |  browser=${browser} = browser=chrome (str)
+______________________________________________________________________________
+Tests.Test PVH-st06                                                           
+==============================================================================
+PVH-st06                                                              | FAIL |
+Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 121
+Current browser version is 133.0.6943.142 with binary path C:\Users\symphonylocal\AppData\Local\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF6B15C5E42+3538674]
+	(No symbol) [0x00007FF6B11E4C02]
+	(No symbol) [0x00007FF6B1095AEB]
+	(No symbol) [0x00007FF6B10CC512]
+	(No symbol) [0x00007FF6B10CB872]
+	(No symbol) [0x00007FF6B10C5106]
+	(No symbol) [0x00007FF6B10C21C8]
+	(No symbol) [0x00007FF6B11094B9]
+	(No symbol) [0x00007FF6B10FEE53]
+	(No symbol) [0x00007FF6B10CF514]
+	(No symbol) [0x00007FF6B10D0631]
+	GetHandleVerifier [0x00007FF6B15F6CAD+3738973]
+	GetHandleVerifier [0x00007FF6B164C506+4089270]
+	GetHandleVerifier [0x00007FF6B1644823+4057299]
+	GetHandleVerifier [0x00007FF6B1315C49+720121]
+	(No symbol) [0x00007FF6B11F126F]
+	(No symbol) [0x00007FF6B11EC304]
+	(No symbol) [0x00007FF6B11EC432]
+	(No symbol) [0x00007FF6B11DBD04]
+	BaseThreadInitThunk [0x00007FF891497AC4+20]
+	RtlUserThreadStart [0x00007FF8918CA8C1+33]
+------------------------------------------------------------------------------
+Tests.Test PVH-st06                                                   | FAIL |
+Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 121
+Current browser version is 133.0.6943.142 with binary path C:\Users\symphonylocal\AppData\Local\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF6B15C5E42+3538674]
+	(No symbol) [0x00007FF6B11E4C02]
+	(No symbol) [0x00007FF6B1095AEB]
+	(No symbol) [0x00007FF6B10CC512]
+	(No symbol) [0x00007FF6B10CB872]
+	(No symbol) [0x00007FF6B10C5106]
+	(No symbol) [0x00007FF6B10C21C8]
+	(No symbol) [0x00007FF6B11094B9]
+	(No symbol) [0x00007FF6B10FEE53]
+	(No symbol) [0x00007FF6B10CF514]
+	(No symbol) [0x00007FF6B10D0631]
+	GetHandleVerifier [0x00007FF6B15F6CAD+3738973]
+	GetHandleVerifier [0x00007FF6B164C506+4089270]
+	GetHandleVerifier [0x00007FF6B1644823+4057299]
+	GetHandleVerifier [0x00007FF6B1315C49+720121]
+	(No symbol) [0x00007FF6B11F126F]
+	(No symbol) [0x00007FF6B11EC304]
+	(No symbol) [0x00007FF6B11EC432]
+	(No symbol) [0x00007FF6B11DBD04]
+	BaseThreadInitThunk [0x00007FF891497AC4+20]
+	RtlUserThreadStart [0x00007FF8918CA8C1+33]
+
+
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests :: Testing functionality through Robot Framework                | FAIL |
+Suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 121
+Current browser version is 133.0.6943.142 with binary path C:\Users\symphonylocal\AppData\Local\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF6B15C5E42+3538674]
+	(No symbol) [0x00007FF6B11E4C02]
+	(No symbol) [0x00007FF6B1095AEB]
+	(No symbol) [0x00007FF6B10CC512]
+	(No symbol) [0x00007FF6B10CB872]
+	(No symbol) [0x00007FF6B10C5106]
+	(No symbol) [0x00007FF6B10C21C8]
+	(No symbol) [0x00007FF6B11094B9]
+	(No symbol) [0x00007FF6B10FEE53]
+	(No symbol) [0x00007FF6B10CF514]
+	(No symbol) [0x00007FF6B10D0631]
+	GetHandleVerifier [0x00007FF6B15F6CAD+3738973]
+	GetHandleVerifier [0x00007FF6B164C506+4089270]
+	GetHandleVerifier [0x00007FF6B1644823+4057299]
+	GetHandleVerifier [0x00007FF6B1315C49+720121]
+	(No symbol) [0x00007FF6B11F126F]
+	(No symbol) [0x00007FF6B11EC304]
+	(No symbol) [0x00007FF6B11EC432]
+	(No symbol) [0x00007FF6B11DBD04]
+	BaseThreadInitThunk [0x00007FF891497AC4+20]
+	RtlUserThreadStart [0x00007FF8918CA8C1+33]
+
+
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Replay\PVH\Output\8d561fb5-84b8-4603-9513-1dedd231d81d\pabot_results\0\Output.xml
