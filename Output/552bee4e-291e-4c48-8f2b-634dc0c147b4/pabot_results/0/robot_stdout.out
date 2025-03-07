@@ -1,0 +1,27 @@
+==============================================================================
+Tests :: Testing functionality through Robot Framework                        
+==============================================================================
+Tests.Test PVH-sm37                                                           
+==============================================================================
+PVH-sm37                                                                
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Test_PVH-sm37.robot:8
+    T:  PVH-sm37    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Test_PVH-sm37.robot:9
+      PVH-sm37    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Resource\PVH-sm37.robot:27
+      Clear Field Text    wnd[0]/usr/txtBTCH2170-JOBNAME
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Clear Field Text' found.
+------------------------------------------------------------------------------
+Tests.Test PVH-sm37                                                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests :: Testing functionality through Robot Framework                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Replay\PVH\Output\552bee4e-291e-4c48-8f2b-634dc0c147b4\pabot_results\0\Output.xml
