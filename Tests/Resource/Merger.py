@@ -1,7 +1,7 @@
 import os
 import shutil
 from PIL import Image #pillow
-# from fpdf import FPDF
+from fpdf import FPDF
 import os
 from datetime import datetime
 
