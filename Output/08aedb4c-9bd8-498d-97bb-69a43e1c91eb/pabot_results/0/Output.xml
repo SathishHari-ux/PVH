@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.13.2 on win32)" generated="20250307 11:52:42.363" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Replay\PVH\Tests">
+<kw name="Setup highest level suite" type="SETUP">
+<kw name="Set Variable" library="BuiltIn">
+<var>${d.test_server}</var>
+<arg>${test_server}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250307 11:52:43.744" level="INFO">${d.test_server} = Dev</msg>
+<status status="PASS" starttime="20250307 11:52:43.744" endtime="20250307 11:52:43.744"/>
+</kw>
+<kw name="Reset screenshot count variable" library="Support">
+<kw name="Set Variable" library="BuiltIn">
+<var>${screenshotCount}</var>
+<arg>${PABOTQUEUEINDEX}_1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250307 11:52:43.745" level="INFO">${screenshotCount} = 0_1</msg>
+<status status="PASS" starttime="20250307 11:52:43.745" endtime="20250307 11:52:43.745"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${screenshotCount}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250307 11:52:43.746" level="INFO">${screenshotCount} = 0_1</msg>
+<status status="PASS" starttime="20250307 11:52:43.745" endtime="20250307 11:52:43.746"/>
+</kw>
+<kw name="Set up screenshot directory" library="Support">
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${OUTPUTDIR}${/}${wvar('screenshot_dir')}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20250307 11:52:43.747" level="INFO">Web.Dev.screenshot_dir: Screenshot</msg>
+<msg timestamp="20250307 11:52:43.749" level="INFO" html="true">Created directory '&lt;a href="file://C:\Replay\PVH\Output\08aedb4c-9bd8-498d-97bb-69a43e1c91eb\pabot_results\0\Screenshot"&gt;C:\Replay\PVH\Output\08aedb4c-9bd8-498d-97bb-69a43e1c91eb\pabot_results\0\Screenshot&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20250307 11:52:43.746" endtime="20250307 11:52:43.749"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:43.746" endtime="20250307 11:52:43.749"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:43.744" endtime="20250307 11:52:43.750"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${screenshot_taking}</arg>
+<arg>${True}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250307 11:52:43.750" level="INFO">${screenshot_taking} = True</msg>
+<status status="PASS" starttime="20250307 11:52:43.750" endtime="20250307 11:52:43.750"/>
+</kw>
+<kw name="Setup linux execution" library="Support">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${web_test_check}</var>
+<arg>Variable Should Exist</arg>
+<arg>${web_test}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${web_test}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20250307 11:52:43.751" endtime="20250307 11:52:43.752"/>
+</kw>
+<msg timestamp="20250307 11:52:43.752" level="INFO">${web_test_check} = True</msg>
+<status status="PASS" starttime="20250307 11:52:43.751" endtime="20250307 11:52:43.752"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${web_test_check}</arg>
+<arg>Setup Docker Execution Options</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Setup Docker Execution Options" library="Support_Web">
+<kw name="Setup Suite Metadata" library="Support_Web">
+<arg>${browser}</arg>
+<kw name="Get Browser Metadata" library="BrowserSupport">
+<var>&amp;{browser_information}</var>
+<arg>browser=${browser}</arg>
+<doc>Fetches browser metadata information
+:param browser: Name of the browser for which information is fetched
+:param reload: Re-read the metadata based on the browser
+:return: Browser metadata information, dict of format
+            {"browser_version": browser version value,
+             "driver_version": driver version value}</doc>
+<msg timestamp="20250307 11:52:47.895" level="INFO">&amp;{browser_information} = { browser_version=134.0.6998.36 | driver_version=134.0.6998.35  }</msg>
+<status status="PASS" starttime="20250307 11:52:43.753" endtime="20250307 11:52:47.896"/>
+</kw>
+<kw name="Set Suite Metadata" library="BuiltIn">
+<arg>test_browser_name</arg>
+<arg>${browser}</arg>
+<doc>Sets metadata for the current test suite.</doc>
+<msg timestamp="20250307 11:52:47.896" level="INFO">Set suite metadata 'test_browser_name' to value 'chrome'.</msg>
+<status status="PASS" starttime="20250307 11:52:47.896" endtime="20250307 11:52:47.896"/>
+</kw>
+<kw name="Set Suite Metadata" library="BuiltIn">
+<arg>test_browser_version</arg>
+<arg>${browser_information.browser_version}</arg>
+<doc>Sets metadata for the current test suite.</doc>
+<msg timestamp="20250307 11:52:47.897" level="INFO">Set suite metadata 'test_browser_version' to value '134.0.6998.36'.</msg>
+<status status="PASS" starttime="20250307 11:52:47.897" endtime="20250307 11:52:47.898"/>
+</kw>
+<kw name="Set Suite Metadata" library="BuiltIn">
+<arg>test_driver_version</arg>
+<arg>${browser_information.driver_version}</arg>
+<doc>Sets metadata for the current test suite.</doc>
+<msg timestamp="20250307 11:52:47.898" level="INFO">Set suite metadata 'test_driver_version' to value '134.0.6998.35 '.</msg>
+<status status="PASS" starttime="20250307 11:52:47.898" endtime="20250307 11:52:47.898"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:43.753" endtime="20250307 11:52:47.899"/>
+</kw>
+<kw name="Setup Global Docker Execution Options" library="Support_Web">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${global_browser_options}</arg>
+<arg>None</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250307 11:52:47.900" level="INFO">${global_browser_options} = None</msg>
+<status status="PASS" starttime="20250307 11:52:47.899" endtime="20250307 11:52:47.900"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${docker_check}</var>
+<arg>EXECUTION_ENVIRONMENT</arg>
+<arg>not_found</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20250307 11:52:47.901" level="INFO">${docker_check} = not_found</msg>
+<status status="PASS" starttime="20250307 11:52:47.900" endtime="20250307 11:52:47.901"/>
+</kw>
+<kw name="Run Keyword And Return If" library="BuiltIn">
+<arg>"${docker_check}"!="docker"</arg>
+<arg>Log</arg>
+<arg>Not executing on Docker</arg>
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Not executing on Docker</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250307 11:52:47.901" level="INFO">Not executing on Docker</msg>
+<status status="PASS" starttime="20250307 11:52:47.901" endtime="20250307 11:52:47.902"/>
+</kw>
+<msg timestamp="20250307 11:52:47.902" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20250307 11:52:47.901" endtime="20250307 11:52:47.902"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{options}</var>
+<arg>--headless</arg>
+<arg>--no-sandbox</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:47.902" endtime="20250307 11:52:47.902"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>@{docker_options}</arg>
+<arg>@{options}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:47.902" endtime="20250307 11:52:47.903"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:47.899" endtime="20250307 11:52:47.903"/>
+</kw>
+<kw name="Create Webdriver for chrome preferences" library="Support_Web">
+<kw name="Update Docker Execution Options" library="Support_Web">
+<var>${list_prefs}</var>
+<arg>${list_prefs}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${docker_check}</var>
+<arg>Variable Should Exist</arg>
+<arg>${docker_options}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${docker_options}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<msg timestamp="20250307 11:52:47.906" level="FAIL">Variable '${docker_options}' does not exist.</msg>
+<status status="FAIL" starttime="20250307 11:52:47.904" endtime="20250307 11:52:47.907"/>
+</kw>
+<msg timestamp="20250307 11:52:47.907" level="INFO">${docker_check} = False</msg>
+<status status="PASS" starttime="20250307 11:52:47.904" endtime="20250307 11:52:47.907"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${list_prefs_length}</var>
+<arg>${list_prefs}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20250307 11:52:47.907" level="INFO">Length is 1</msg>
+<msg timestamp="20250307 11:52:47.907" level="INFO">${list_prefs_length} = 1</msg>
+<status status="PASS" starttime="20250307 11:52:47.907" endtime="20250307 11:52:47.907"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${list_prefs}</var>
+<arg>${docker_check} and ${list_prefs_length}&gt;0 and ${list_prefs}[0] != []</arg>
+<arg>Combine Lists</arg>
+<arg>${list_prefs}</arg>
+<arg>${docker_options}</arg>
+<arg>ELSE IF</arg>
+<arg>${docker_check}</arg>
+<arg>Set Variable</arg>
+<arg>${docker_options}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${list_prefs}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${list_prefs}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20250307 11:52:47.908" endtime="20250307 11:52:47.908"/>
+</kw>
+<msg timestamp="20250307 11:52:47.908" level="INFO">${list_prefs} = [[]]</msg>
+<status status="PASS" starttime="20250307 11:52:47.907" endtime="20250307 11:52:47.908"/>
+</kw>
+<msg timestamp="20250307 11:52:47.908" level="INFO">${list_prefs} = [[]]</msg>
+<status status="PASS" starttime="20250307 11:52:47.903" endtime="20250307 11:52:47.908"/>
+</kw>
+<kw name="Create Chrome Options for download preferences" library="Support_Web">
+<var>${chrome_options}</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250307 11:52:47.909" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002335D88CA50&gt;</msg>
+<status status="PASS" starttime="20250307 11:52:47.909" endtime="20250307 11:52:47.909"/>
+</kw>
+<msg timestamp="20250307 11:52:47.909" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002335D88CA50&gt;</msg>
+<status status="PASS" starttime="20250307 11:52:47.908" endtime="20250307 11:52:47.909"/>
+</kw>
+<kw name="Update Preferences List" library="Support_Web">
+<arg>${chrome_options}</arg>
+<arg>@{list_prefs}</arg>
+<kw name="Convert To String" library="BuiltIn">
+<var>${string_prefs}</var>
+<arg>${list_prefs}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250307 11:52:47.910" level="INFO">${string_prefs} = [[]]</msg>
+<status status="PASS" starttime="20250307 11:52:47.910" endtime="20250307 11:52:47.910"/>
+</kw>
+<kw name="Return From Keyword If" library="BuiltIn">
+<arg>${string_prefs} == [[]]</arg>
+<doc>Returns from the enclosing user keyword if ``condition`` is true.</doc>
+<msg timestamp="20250307 11:52:47.911" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20250307 11:52:47.910" endtime="20250307 11:52:47.911"/>
+</kw>
+<for flavor="IN">
+<var>${preference}</var>
+<value>@{list_prefs}</value>
+<iter>
+<var name="${preference}"/>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>${preference}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:47.911" endtime="20250307 11:52:47.911"/>
+</kw>
+<status status="NOT RUN" starttime="20250307 11:52:47.911" endtime="20250307 11:52:47.911"/>
+</iter>
+<status status="NOT RUN" starttime="20250307 11:52:47.911" endtime="20250307 11:52:47.911"/>
+</for>
+<status status="PASS" starttime="20250307 11:52:47.909" endtime="20250307 11:52:47.912"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${kw_prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20250307 11:52:47.912" endtime="20250307 11:52:47.912"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${global_browser_options}</arg>
+<arg>${chrome options}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250307 11:52:47.913" level="INFO">${global_browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002335D88CA50&gt;</msg>
+<status status="PASS" starttime="20250307 11:52:47.912" endtime="20250307 11:52:47.913"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:47.903" endtime="20250307 11:52:47.913"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:43.752" endtime="20250307 11:52:47.913"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:43.752" endtime="20250307 11:52:47.913"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:43.750" endtime="20250307 11:52:47.913"/>
+</kw>
+<kw name="Set Suite Metadata" library="BuiltIn">
+<arg>environment</arg>
+<arg>${test_server}</arg>
+<doc>Sets metadata for the current test suite.</doc>
+<msg timestamp="20250307 11:52:47.914" level="INFO">Set suite metadata 'environment' to value 'Dev'.</msg>
+<status status="PASS" starttime="20250307 11:52:47.913" endtime="20250307 11:52:47.914"/>
+</kw>
+<status status="PASS" starttime="20250307 11:52:43.743" endtime="20250307 11:52:47.914"/>
+</kw>
+<suite id="s1-s1" name="Test PVH-st06" source="C:\Replay\PVH\Tests\Test_PVH-st06.robot">
+<kw name="System Logon" library="PVH-st06" type="SETUP">
+<kw name="Start Process" library="Process">
+<arg>${symvar('SAP_SERVER')}</arg>
+<doc>Starts a new process on background.</doc>
+<msg timestamp="20250307 11:52:47.940" level="INFO">Sym.Dev.SAP_SERVER: C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe</msg>
+<msg timestamp="20250307 11:52:47.941" level="INFO">Starting process:
+"C:\Program Files (x86)\SAP\FrontEnd\SAPGUI\saplogon.exe"</msg>
+<status status="PASS" starttime="20250307 11:52:47.939" endtime="20250307 11:52:47.952"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250307 11:52:57.954" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20250307 11:52:47.952" endtime="20250307 11:52:57.954"/>
+</kw>
+<kw name="Connect To Session" library="SAP_Tcode_Library">
+<doc>Connects to an open session SAP.</doc>
+<status status="PASS" starttime="20250307 11:52:57.954" endtime="20250307 11:52:58.059"/>
+</kw>
+<kw name="Open Connection" library="SAP_Tcode_Library">
+<arg>${symvar('PVH_connection')}</arg>
+<doc>Opens a connection to the given connection name. Be sure to provide the full connection name, including the bracket part.</doc>
+<msg timestamp="20250307 11:52:58.061" level="INFO">Sym.Dev.PVH_connection: PFD</msg>
+<msg timestamp="20250307 11:52:58.278" level="INFO" html="true">&lt;a href="sap-screenshot_1.jpg"&gt;&lt;img src="sap-screenshot_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20250307 11:52:58.278" level="FAIL">ValueError: Cannot open connection 'PFD', please check connection name.</msg>
+<msg timestamp="20250307 11:52:58.281" level="INFO">Sym.Dev.PVH_connection: PFD</msg>
+<status status="FAIL" starttime="20250307 11:52:58.060" endtime="20250307 11:52:58.280"/>
+</kw>
+<kw name="Input Text" library="SAP_Tcode_Library">
+<arg>wnd[0]/usr/txtRSYST-MANDT</arg>
+<arg>${symvar('PVH_Client_Id')}</arg>
+<doc>Inserts the given text into the text field identified by locator.
+Use keyword `input password` to insert a password in a text field.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:58.282" endtime="20250307 11:52:58.282"/>
+</kw>
+<kw name="Input Text" library="SAP_Tcode_Library">
+<arg>wnd[0]/usr/txtRSYST-BNAME</arg>
+<arg>${symvar('PVH_User_Name')}</arg>
+<doc>Inserts the given text into the text field identified by locator.
+Use keyword `input password` to insert a password in a text field.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:58.282" endtime="20250307 11:52:58.282"/>
+</kw>
+<kw name="Input Password" library="SAP_Tcode_Library">
+<arg>wnd[0]/usr/pwdRSYST-BCODE</arg>
+<arg>%{PVH_User_Password}</arg>
+<doc>Inserts the given password into the text field identified by locator.
+The password is not recorded in the log.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:58.282" endtime="20250307 11:52:58.282"/>
+</kw>
+<kw name="Send Vkey" library="SAP_Tcode_Library">
+<arg>0</arg>
+<doc>Sends a SAP virtual key combination to the window, not into an element.
+If you want to send a value to a text field, use `input text` instead.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:58.283" endtime="20250307 11:52:58.283"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:58.283" endtime="20250307 11:52:58.283"/>
+</kw>
+<kw name="Multiple Logon Handling" library="SAP_Tcode_Library">
+<arg>wnd[1]</arg>
+<arg>wnd[1]/usr/radMULTI_LOGON_OPT2</arg>
+<arg>wnd[1]/tbar[0]/btn[0]</arg>
+<status status="NOT RUN" starttime="20250307 11:52:58.283" endtime="20250307 11:52:58.283"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250307 11:52:58.283" endtime="20250307 11:52:58.283"/>
+</kw>
+<status status="FAIL" starttime="20250307 11:52:47.939" endtime="20250307 11:52:58.284"/>
+</kw>
+<test id="s1-s1-t1" name="PVH-st06" line="8">
+<tag>pvh-st06</tag>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20250307 11:52:58.284" endtime="20250307 11:52:58.285">Parent suite setup failed:
+ValueError: Cannot open connection 'PFD', please check connection name.</status>
+</test>
+<kw name="System Logout" library="PVH-st06" type="TEARDOWN">
+<kw name="Run Transaction" library="SAP_Tcode_Library">
+<arg>/nex</arg>
+<doc>Runs a Sap transaction. An error is given when an unknown transaction is specified.</doc>
+<msg timestamp="20250307 11:52:58.286" level="FAIL">AttributeError: 'int' object has no attribute 'findById'</msg>
+<status status="FAIL" starttime="20250307 11:52:58.286" endtime="20250307 11:52:58.288"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250307 11:53:03.289" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20250307 11:52:58.288" endtime="20250307 11:53:03.289"/>
+</kw>
+<status status="FAIL" starttime="20250307 11:52:58.286" endtime="20250307 11:53:03.289">AttributeError: 'int' object has no attribute 'findById'</status>
+</kw>
+<status status="FAIL" starttime="20250307 11:52:47.914" endtime="20250307 11:53:03.290">Suite setup failed:
+ValueError: Cannot open connection 'PFD', please check connection name.
+
+Also suite teardown failed:
+AttributeError: 'int' object has no attribute 'findById'</status>
+</suite>
+<doc>Testing functionality through Robot Framework</doc>
+<meta name="environment">Dev</meta>
+<meta name="test_browser_name">chrome</meta>
+<meta name="test_browser_version">134.0.6998.36</meta>
+<meta name="test_driver_version">134.0.6998.35 </meta>
+<meta name="test_environment">Dev</meta>
+<meta name="test_freeze_dependencies">astroid==3.3.8,attrs==25.1.0,beautifulsoup4==4.13.3,bs4==0.0.2,certifi==2025.1.31,cffi==1.17.1,chardet==5.2.0,charset-normalizer==3.4.1,click==8.1.8,colorama==0.4.6,cryptography==44.0.2,defusedxml==0.7.1,dill==0.3.9,docutils==0.21.2,et_xmlfile==2.0.0,exceptiongroup==1.2.2,gitdb==4.0.12,GitPython==3.1.44,h11==0.14.0,idna==3.10,isort==6.0.1,Jinja2==3.1.5,jira==3.8.0,jsonpath-ng==1.7.0,jsonschema==4.23.0,jsonschema-specifications==2024.10.1,lazy-object-proxy==1.10.0,lxml==5.3.1,markdown-it-py==3.0.0,MarkupSafe==3.0.2,mccabe==0.7.0,mdurl==0.1.2,natsort==8.4.0,oauthlib==3.2.2,openpyxl==3.1.5,outcome==1.3.0.post0,packaging==24.2,pathspec==0.11.2,pillow==11.1.0,pip==25.0.1,platformdirs==4.3.6,ply==3.11,pycparser==2.22,Pygments==2.19.1,pylint==3.3.4,PySocks==1.7.1,pywin32==308,PyYAML==6.0.2,referencing==0.36.2,requests==2.32.3,requests-oauthlib==2.0.0,requests-toolbelt==1.0.0,rich==13.9.4,rich-click==1.6.1,robotframework==6.0.2,robotframework-datadriver==1.9.0,robotframework-excellib==2.0.1,robotframework-jsonlibrary==0.5,robotframework-pabot==2.16.0,robotframework-pythonlibcore==4.2.0,robotframework-requests==0.9.2,robotframework-sapguilibrary==1.1,robotframework-seleniumlibrary==5.1.3,robotframework-stacktrace==0.4.1,robotframework-tidy==4.5.0,rpds-py==0.23.1,selenium==4.9.1,setuptools==75.8.2,smmap==5.0.2,sniffio==1.3.1,sortedcontainers==2.4.0,soupsieve==2.6,tomli==2.0.2,tomlkit==0.13.2,trio==0.29.0,trio-websocket==0.12.2,typing_extensions==4.12.2,urllib3==2.3.0,wheel==0.45.1,wrapt==1.17.2,wsproto==1.2.0</meta>
+<status status="FAIL" starttime="20250307 11:52:43.301" endtime="20250307 11:53:03.368"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">pvh-st06</stat>
+<stat pass="0" fail="1" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test PVH-st06">Tests.Test PVH-st06</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20250307 11:52:47.938" level="ERROR">Error in file 'C:\Replay\PVH\Tests\Resource\PVH-st06.robot' on line 6: Importing library 'C:\Replay\PVH\Tests\Resource\Merger.py' failed: ModuleNotFoundError: No module named 'fpdf'
+Traceback (most recent call last):
+  File "C:\Replay\PVH\Tests\Resource\Merger.py", line 4, in &lt;module&gt;
+    from fpdf import FPDF
+PYTHONPATH:
+  C:\Replay\PVH\Tests\Resource
+  C:\Replay\PVH\RoboEnvironment\Symphony\Scripts\robot.exe
+  C:\Replay\PVH\RoboEnvironment\Symphony\Scripts\python313.zip
+  C:\Users\symphonylocal\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\symphonylocal\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\symphonylocal\AppData\Local\Programs\Python\Python313
+  C:\Replay\PVH\RoboEnvironment\Symphony
+  C:\Replay\PVH\RoboEnvironment\Symphony\Lib\site-packages
+  C:\Replay\PVH\RoboEnvironment\Symphony\Lib\site-packages\win32
+  C:\Replay\PVH\RoboEnvironment\Symphony\Lib\site-packages\win32\lib
+  C:\Replay\PVH\RoboEnvironment\Symphony\Lib\site-packages\Pythonwin
+  C:\Replay\PVH\RoboEnvironment\Symphony\Lib\site-packages\setuptools\_vendor
+  C:\Replay\PVH</msg>
+</errors>
+</robot>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.13.2 on win32)" generated="20250307 11:44:16.151" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Replay\PVH\Tests">
+<kw name="Setup highest level suite" type="SETUP">
+<kw name="Set Variable" library="BuiltIn">
+<var>${d.test_server}</var>
+<arg>${test_server}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250307 11:44:17.420" level="INFO">${d.test_server} = Dev</msg>
+<status status="PASS" starttime="20250307 11:44:17.419" endtime="20250307 11:44:17.420"/>
+</kw>
+<kw name="Reset screenshot count variable" library="Support">
+<kw name="Set Variable" library="BuiltIn">
+<var>${screenshotCount}</var>
+<arg>${PABOTQUEUEINDEX}_1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250307 11:44:17.421" level="INFO">${screenshotCount} = 0_1</msg>
+<status status="PASS" starttime="20250307 11:44:17.420" endtime="20250307 11:44:17.421"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${screenshotCount}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250307 11:44:17.421" level="INFO">${screenshotCount} = 0_1</msg>
+<status status="PASS" starttime="20250307 11:44:17.421" endtime="20250307 11:44:17.421"/>
+</kw>
+<kw name="Set up screenshot directory" library="Support">
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${OUTPUTDIR}${/}${wvar('screenshot_dir')}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20250307 11:44:17.423" level="INFO">Web.Dev.screenshot_dir: Screenshot</msg>
+<msg timestamp="20250307 11:44:17.424" level="INFO" html="true">Created directory '&lt;a href="file://C:\Replay\PVH\Output\555ef8d8-d78a-42bc-bb4d-fbd847c1c4aa\pabot_results\0\Screenshot"&gt;C:\Replay\PVH\Output\555ef8d8-d78a-42bc-bb4d-fbd847c1c4aa\pabot_results\0\Screenshot&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20250307 11:44:17.422" endtime="20250307 11:44:17.424"/>
+</kw>
+<status status="PASS" starttime="20250307 11:44:17.421" endtime="20250307 11:44:17.425"/>
+</kw>
+<status status="PASS" starttime="20250307 11:44:17.420" endtime="20250307 11:44:17.425"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${screenshot_taking}</arg>
+<arg>${True}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250307 11:44:17.426" level="INFO">${screenshot_taking} = True</msg>
+<status status="PASS" starttime="20250307 11:44:17.425" endtime="20250307 11:44:17.426"/>
+</kw>
+<kw name="Setup linux execution" library="Support">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${web_test_check}</var>
+<arg>Variable Should Exist</arg>
+<arg>${web_test}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${web_test}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20250307 11:44:17.427" endtime="20250307 11:44:17.427"/>
+</kw>
+<msg timestamp="20250307 11:44:17.428" level="INFO">${web_test_check} = True</msg>
+<status status="PASS" starttime="20250307 11:44:17.426" endtime="20250307 11:44:17.428"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${web_test_check}</arg>
+<arg>Setup Docker Execution Options</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Setup Docker Execution Options" library="Support_Web">
+<kw name="Setup Suite Metadata" library="Support_Web">
+<arg>${browser}</arg>
+<kw name="Get Browser Metadata" library="BrowserSupport">
+<var>&amp;{browser_information}</var>
+<arg>browser=${browser}</arg>
+<doc>Fetches browser metadata information
+:param browser: Name of the browser for which information is fetched
+:param reload: Re-read the metadata based on the browser
+:return: Browser metadata information, dict of format
+            {"browser_version": browser version value,
+             "driver_version": driver version value}</doc>
+<msg timestamp="20250307 11:44:23.051" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 133.0.6943.142 with binary path C:\Users\symphonylocal\AppData\Local\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF65364DF85+26693]
+	(No symbol) [0x00007FF6535AEAD0]
+	(No symbol) [0x00007FF6534391CA]
+	(No symbol) [0x00007FF65347D34D]
+	(No symbol) [0x00007FF65347C38B]
+	(No symbol) [0x00007FF653476507]
+	(No symbol) [0x00007FF653471A6D]
+	(No symbol) [0x00007FF6534C5C58]
+	(No symbol) [0x00007FF6534C5210]
+	(No symbol) [0x00007FF6534B76C3]
+	(No symbol) [0x00007FF653480490]
+	(No symbol) [0x00007FF653481743]
+	GetHandleVerifier [0x00007FF6539A436D+3525677]
+	GetHandleVerifier [0x00007FF6539B7F3B+3606523]
+	GetHandleVerifier [0x00007FF6539ACEE3+3561379]
+	GetHandleVerifier [0x00007FF653717C0A+853194]
+	(No symbol) [0x00007FF6535B990F]
+	(No symbol) [0x00007FF6535B5674]
+	(No symbol) [0x00007FF6535B5816]
+	(No symbol) [0x00007FF6535A4D89]
+	BaseThreadInitThunk [0x00007FF891497AC4+20]
+	RtlUserThreadStart [0x00007FF8918CA8C1+33]
+</msg>
+<status status="FAIL" starttime="20250307 11:44:17.429" endtime="20250307 11:44:23.056"/>
+</kw>
+<kw name="Set Suite Metadata" library="BuiltIn">
+<arg>test_browser_name</arg>
+<arg>${browser}</arg>
+<doc>Sets metadata for the current test suite.</doc>
+<status status="NOT RUN" starttime="20250307 11:44:23.057" endtime="20250307 11:44:23.058"/>
+</kw>
+<kw name="Set Suite Metadata" library="BuiltIn">
+<arg>test_browser_version</arg>
+<arg>${browser_information.browser_version}</arg>
+<doc>Sets metadata for the current test suite.</doc>
+<status status="NOT RUN" starttime="20250307 11:44:23.058" endtime="20250307 11:44:23.058"/>
+</kw>
+<kw name="Set Suite Metadata" library="BuiltIn">
+<arg>test_driver_version</arg>
+<arg>${browser_information.driver_version}</arg>
+<doc>Sets metadata for the current test suite.</doc>
+<status status="NOT RUN" starttime="20250307 11:44:23.058" endtime="20250307 11:44:23.058"/>
+</kw>
+<status status="FAIL" starttime="20250307 11:44:17.428" endtime="20250307 11:44:23.059"/>
+</kw>
+<kw name="Setup Global Docker Execution Options" library="Support_Web">
+<status status="NOT RUN" starttime="20250307 11:44:23.059" endtime="20250307 11:44:23.059"/>
+</kw>
+<kw name="Create Webdriver for chrome preferences" library="Support_Web">
+<status status="NOT RUN" starttime="20250307 11:44:23.059" endtime="20250307 11:44:23.059"/>
+</kw>
+<status status="FAIL" starttime="20250307 11:44:17.428" endtime="20250307 11:44:23.059"/>
+</kw>
+<status status="FAIL" starttime="20250307 11:44:17.428" endtime="20250307 11:44:23.059"/>
+</kw>
+<status status="FAIL" starttime="20250307 11:44:17.426" endtime="20250307 11:44:23.059"/>
+</kw>
+<kw name="Set Suite Metadata" library="BuiltIn">
+<arg>environment</arg>
+<arg>${test_server}</arg>
+<doc>Sets metadata for the current test suite.</doc>
+<status status="NOT RUN" starttime="20250307 11:44:23.060" endtime="20250307 11:44:23.060"/>
+</kw>
+<status status="FAIL" starttime="20250307 11:44:17.419" endtime="20250307 11:44:23.060"/>
+</kw>
+<suite id="s1-s1" name="Test PVH-st06" source="C:\Replay\PVH\Tests\Test_PVH-st06.robot">
+<test id="s1-s1-t1" name="PVH-st06" line="8">
+<tag>pvh-st06</tag>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20250307 11:44:23.062" endtime="20250307 11:44:23.063">Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 133.0.6943.142 with binary path C:\Users\symphonylocal\AppData\Local\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF65364DF85+26693]
+	(No symbol) [0x00007FF6535AEAD0]
+	(No symbol) [0x00007FF6534391CA]
+	(No symbol) [0x00007FF65347D34D]
+	(No symbol) [0x00007FF65347C38B]
+	(No symbol) [0x00007FF653476507]
+	(No symbol) [0x00007FF653471A6D]
+	(No symbol) [0x00007FF6534C5C58]
+	(No symbol) [0x00007FF6534C5210]
+	(No symbol) [0x00007FF6534B76C3]
+	(No symbol) [0x00007FF653480490]
+	(No symbol) [0x00007FF653481743]
+	GetHandleVerifier [0x00007FF6539A436D+3525677]
+	GetHandleVerifier [0x00007FF6539B7F3B+3606523]
+	GetHandleVerifier [0x00007FF6539ACEE3+3561379]
+	GetHandleVerifier [0x00007FF653717C0A+853194]
+	(No symbol) [0x00007FF6535B990F]
+	(No symbol) [0x00007FF6535B5674]
+	(No symbol) [0x00007FF6535B5816]
+	(No symbol) [0x00007FF6535A4D89]
+	BaseThreadInitThunk [0x00007FF891497AC4+20]
+	RtlUserThreadStart [0x00007FF8918CA8C1+33]
+</status>
+</test>
+<status status="FAIL" starttime="20250307 11:44:23.061" endtime="20250307 11:44:23.064">Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 133.0.6943.142 with binary path C:\Users\symphonylocal\AppData\Local\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF65364DF85+26693]
+	(No symbol) [0x00007FF6535AEAD0]
+	(No symbol) [0x00007FF6534391CA]
+	(No symbol) [0x00007FF65347D34D]
+	(No symbol) [0x00007FF65347C38B]
+	(No symbol) [0x00007FF653476507]
+	(No symbol) [0x00007FF653471A6D]
+	(No symbol) [0x00007FF6534C5C58]
+	(No symbol) [0x00007FF6534C5210]
+	(No symbol) [0x00007FF6534B76C3]
+	(No symbol) [0x00007FF653480490]
+	(No symbol) [0x00007FF653481743]
+	GetHandleVerifier [0x00007FF6539A436D+3525677]
+	GetHandleVerifier [0x00007FF6539B7F3B+3606523]
+	GetHandleVerifier [0x00007FF6539ACEE3+3561379]
+	GetHandleVerifier [0x00007FF653717C0A+853194]
+	(No symbol) [0x00007FF6535B990F]
+	(No symbol) [0x00007FF6535B5674]
+	(No symbol) [0x00007FF6535B5816]
+	(No symbol) [0x00007FF6535A4D89]
+	BaseThreadInitThunk [0x00007FF891497AC4+20]
+	RtlUserThreadStart [0x00007FF8918CA8C1+33]
+</status>
+</suite>
+<doc>Testing functionality through Robot Framework</doc>
+<meta name="test_environment">Dev</meta>
+<meta name="test_freeze_dependencies">astroid==3.3.8,attrs==25.1.0,beautifulsoup4==4.13.3,bs4==0.0.2,certifi==2025.1.31,cffi==1.17.1,chardet==5.2.0,charset-normalizer==3.4.1,click==8.1.8,colorama==0.4.6,cryptography==44.0.2,defusedxml==0.7.1,dill==0.3.9,docutils==0.21.2,et_xmlfile==2.0.0,exceptiongroup==1.2.2,gitdb==4.0.12,GitPython==3.1.44,h11==0.14.0,idna==3.10,isort==6.0.1,Jinja2==3.1.5,jira==3.8.0,jsonpath-ng==1.7.0,jsonschema==4.23.0,jsonschema-specifications==2024.10.1,lazy-object-proxy==1.10.0,lxml==5.3.1,markdown-it-py==3.0.0,MarkupSafe==3.0.2,mccabe==0.7.0,mdurl==0.1.2,natsort==8.4.0,oauthlib==3.2.2,openpyxl==3.1.5,outcome==1.3.0.post0,packaging==24.2,pathspec==0.11.2,pillow==11.1.0,pip==25.0.1,platformdirs==4.3.6,ply==3.11,pycparser==2.22,Pygments==2.19.1,pylint==3.3.4,PySocks==1.7.1,pywin32==308,PyYAML==6.0.2,referencing==0.36.2,requests==2.32.3,requests-oauthlib==2.0.0,requests-toolbelt==1.0.0,rich==13.9.4,rich-click==1.6.1,robotframework==6.0.2,robotframework-datadriver==1.9.0,robotframework-excellib==2.0.1,robotframework-jsonlibrary==0.5,robotframework-pabot==2.16.0,robotframework-pythonlibcore==4.2.0,robotframework-requests==0.9.2,robotframework-sapguilibrary==1.1,robotframework-seleniumlibrary==5.1.3,robotframework-stacktrace==0.4.1,robotframework-tidy==4.5.0,rpds-py==0.23.1,selenium==4.9.1,setuptools==75.8.2,smmap==5.0.2,sniffio==1.3.1,sortedcontainers==2.4.0,soupsieve==2.6,tomli==2.0.2,tomlkit==0.13.2,trio==0.29.0,trio-websocket==0.12.2,typing_extensions==4.12.2,urllib3==2.3.0,wheel==0.45.1,wrapt==1.17.2,wsproto==1.2.0</meta>
+<status status="FAIL" starttime="20250307 11:44:16.992" endtime="20250307 11:44:23.131">Suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 133.0.6943.142 with binary path C:\Users\symphonylocal\AppData\Local\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF65364DF85+26693]
+	(No symbol) [0x00007FF6535AEAD0]
+	(No symbol) [0x00007FF6534391CA]
+	(No symbol) [0x00007FF65347D34D]
+	(No symbol) [0x00007FF65347C38B]
+	(No symbol) [0x00007FF653476507]
+	(No symbol) [0x00007FF653471A6D]
+	(No symbol) [0x00007FF6534C5C58]
+	(No symbol) [0x00007FF6534C5210]
+	(No symbol) [0x00007FF6534B76C3]
+	(No symbol) [0x00007FF653480490]
+	(No symbol) [0x00007FF653481743]
+	GetHandleVerifier [0x00007FF6539A436D+3525677]
+	GetHandleVerifier [0x00007FF6539B7F3B+3606523]
+	GetHandleVerifier [0x00007FF6539ACEE3+3561379]
+	GetHandleVerifier [0x00007FF653717C0A+853194]
+	(No symbol) [0x00007FF6535B990F]
+	(No symbol) [0x00007FF6535B5674]
+	(No symbol) [0x00007FF6535B5816]
+	(No symbol) [0x00007FF6535A4D89]
+	BaseThreadInitThunk [0x00007FF891497AC4+20]
+	RtlUserThreadStart [0x00007FF8918CA8C1+33]
+</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">pvh-st06</stat>
+<stat pass="0" fail="1" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test PVH-st06">Tests.Test PVH-st06</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
