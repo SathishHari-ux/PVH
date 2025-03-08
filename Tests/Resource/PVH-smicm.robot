@@ -51,7 +51,7 @@ PVH-smicm
 	Sleep	1
     Click Element	wnd[1]/tbar[0]/btn[17]
 	Sleep	2
-    Take Screenshot    012_componentversion_04.jpg
+    Take Screenshot    012_kernelinfo_04.jpg
     Sleep    1
 	Click Element	wnd[2]/tbar[0]/btn[0]
 	Sleep	2
