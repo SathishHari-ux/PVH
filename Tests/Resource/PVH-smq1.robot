@@ -32,13 +32,15 @@ PVH-smq1
     Input Text    wnd[0]/usr/txtCLIENT	*
 	Sleep	2
     Clear Field Text    wnd[0]/usr/txtQERROR
-	Input Text    wnd[0]/usr/txtQERROR	*
+	Input Text    wnd[0]/usr/txtQERROR	x
 	Sleep	2
     Take Screenshot    009_smq1_01.jpg
     Sleep    1
     Click Element    wnd[0]/tbar[1]/btn[8]
     Sleep    1
+    Take Screenshot    009_smq1_02.jpg
+    Sleep    1
     Click Element	wnd[0]/mbar/menu[2]/menu[1]
 	Sleep	1
-    Take Screenshot    009_smq1_02.jpg
+    Take Screenshot    009_smq1_03.jpg
     Merger.Copy Images    ${OUTPUT_DIR}    ${symvar('PVH_Target_Dir')}

@@ -28,11 +28,11 @@ System Logout
 PVH-smicm
     Click Element	wnd[0]/mbar/menu[4]/menu[11]
 	Sleep	1
-    Take Screenshot    012_smicm_01.jpg
+    Take Screenshot    012_componentversion_01.jpg
     Sleep    1
     Click Element	wnd[1]/usr/btnPRELINFO
 	Sleep	1
-    Take Screenshot    012_smicm_02.jpg
+    Take Screenshot    012_componentversion_02.jpg
     Sleep    1
     ${row_count}    Get Row Count    ${TREE_PATH}
     Log    Total Row Count: ${row_count}
@@ -40,8 +40,9 @@ PVH-smicm
     FOR    ${i}    IN RANGE    0    ${row_count + 1}    15
         Log    Processing row ${i}
         ${selected_rows}    Selected_rows    ${TREE_PATH}    ${i}
-        Log To Console    Selected rows: ${selected_rows}
-        Take Screenshot    012_smicm_03_${counter}.jpg
+        Log To Console    Selected rows: ${selected_rows}      
+        ${padded_counter}=    Evaluate    "{:02d}".format(${counter})
+        Take Screenshot    012_componentversion_03_${padded_counter}.jpg
         ${counter}=    Evaluate    ${counter} + 1
         Sleep    1
     END
@@ -50,7 +51,7 @@ PVH-smicm
 	Sleep	1
     Click Element	wnd[1]/tbar[0]/btn[17]
 	Sleep	2
-    Take Screenshot    012_smicm_04.jpg
+    Take Screenshot    012_componentversion_04.jpg
     Sleep    1
 	Click Element	wnd[2]/tbar[0]/btn[0]
 	Sleep	2
