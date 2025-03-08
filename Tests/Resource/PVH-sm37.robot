@@ -38,7 +38,7 @@ PVH-sm37
 	Sleep	2
 	Unselect Checkbox	wnd[0]/usr/chkBTCH2170-FINISHED
 	Sleep	2
-    Take Screenshot    005_sm37_01.jpg
+    Take Screenshot    006_sm37_01.jpg
     Sleep    1
     Click Element	wnd[0]/tbar[1]/btn[8]
 	Sleep	2
