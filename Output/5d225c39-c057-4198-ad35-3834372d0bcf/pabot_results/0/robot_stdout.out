@@ -1,0 +1,30 @@
+==============================================================================
+Tests :: Testing functionality through Robot Framework                        
+==============================================================================
+Tests.Test PVH Imagecompare                                                   
+==============================================================================
+Compare                                                                 
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Test_PVH_Imagecompare.robot:5
+    T:  Compare    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Test_PVH_Imagecompare.robot:6
+      Compare    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Resource\PVH_Imagecompare.robot:6
+      compare pdfs and generate report    pdf1_path=${symvar('Pre_PDF_PATH')}    pdf2_path=${symvar('Post_PDF_PATH')}    output_pdf=${symvar('Target_PDF_PATH')}
+      |  pdf1_path=${symvar('Pre_PDF_PATH')} = pdf1_path=C:\tmp\PVH\Pre\PreScreenshots.pdf (str)
+      |  pdf2_path=${symvar('Post_PDF_PATH')} = pdf2_path=C:\tmp\PVH\Post\PostScreenshots.pdf (str)
+      |  output_pdf=${symvar('Target_PDF_PATH')} = output_pdf=C:\tmp\PVH\Target\PVH_Compared_Images.pdf (str)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'compare pdfs and generate report' found. Did you try using keyword 'PVH_Imagecompare.Compare' and forgot to use enough whitespace between keyword and arguments?
+------------------------------------------------------------------------------
+Tests.Test PVH Imagecompare                                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests :: Testing functionality through Robot Framework                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Replay\PVH\Output\5d225c39-c057-4198-ad35-3834372d0bcf\pabot_results\0\Output.xml

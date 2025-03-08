@@ -1,5 +1,5 @@
-datasources:4e4fe4666d71646578864df66626b465ff472ab6
-commandlineoptions:96fe13ebe560d50b4b7ea26b09b73eab00905d6a
+datasources:fe12d6ed74eb63675896b846a939ac0f79e1e1c1
+commandlineoptions:b93d23ef132484ca32d4b5a09a86f2fa59c59a36
 suitesfrom:no-suites-from-option
-file:e2b5bc47a42f8496e525e7fa696291baa5a06235
---suite Tests.Test PVH-st22
+file:a7f4c6cd341e6b05c1f9274a34adde54e059e4f7
+--suite Tests.Test PVH Imagecompare
