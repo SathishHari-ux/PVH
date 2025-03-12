@@ -1,0 +1,14 @@
+==============================================================================
+Tests :: Testing functionality through Robot Framework                        
+==============================================================================
+Tests.Test PVH Imagecompare                                                   
+==============================================================================
+Compare                                                               | PASS |
+------------------------------------------------------------------------------
+Tests.Test PVH Imagecompare                                           | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Tests :: Testing functionality through Robot Framework                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Replay\PVH\Output\b0594175-f219-4c3b-939d-88daa3d2ed9c\pabot_results\0\Output.xml

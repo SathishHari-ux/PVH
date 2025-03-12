@@ -34,10 +34,10 @@ PVH-smq2
     Clear Field Text    wnd[0]/usr/txtQNAME
 	Input Text    wnd[0]/usr/txtQNAME	*
 	Sleep	2
-    Input Text	wnd[0]/usr/txtDPNDNCY	x
-	Sleep	2
-	Input Text	wnd[0]/usr/txtQERROR	x
-	Sleep	2
+    # Input Text	wnd[0]/usr/txtDPNDNCY	x
+	# Sleep	2
+	# Input Text	wnd[0]/usr/txtQERROR	x
+	# Sleep	2
     Take Screenshot    010_smq2_01.jpg
     Sleep    1
     Click Element    wnd[0]/tbar[1]/btn[8]

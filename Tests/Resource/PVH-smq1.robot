@@ -31,9 +31,9 @@ PVH-smq1
     Clear Field Text    wnd[0]/usr/txtCLIENT
     Input Text    wnd[0]/usr/txtCLIENT	*
 	Sleep	2
-    Clear Field Text    wnd[0]/usr/txtQERROR
-	Input Text    wnd[0]/usr/txtQERROR	x
-	Sleep	2
+    # Clear Field Text    wnd[0]/usr/txtQERROR
+	# Input Text    wnd[0]/usr/txtQERROR	x
+	# Sleep	2
     Take Screenshot    009_smq1_01.jpg
     Sleep    1
     Click Element    wnd[0]/tbar[1]/btn[8]
