@@ -1,0 +1,30 @@
+==============================================================================
+Tests :: Testing functionality through Robot Framework                        
+==============================================================================
+Tests.Test PVH Imagecompare                                                   
+==============================================================================
+Compare                                                                 
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Test_PVH_Imagecompare.robot:5
+    T:  Compare    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Test_PVH_Imagecompare.robot:6
+      Compare    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Resource\PVH_Imagecompare.robot:6
+      Compare Pdfs And Generate Report    pdf1_path=${symvar('Pre_PDF_PATH')}    pdf2_path=${symvar('Post_PDF_PATH')}    output_pdf=${symvar('Target_PDF_PATH')}
+      |  pdf1_path=${symvar('Pre_PDF_PATH')} = pdf1_path=C:\tmp\PVH\QEP\Pre\C:\tmp\PVH\QEP\Pre\QEP_PreScreenshots.pdf (str)
+      |  pdf2_path=${symvar('Post_PDF_PATH')} = pdf2_path=C:\tmp\PVH\QEP\Post\C:\tmp\PVH\QEP\Post\QEP_PostScreenshots.pdf (str)
+      |  output_pdf=${symvar('Target_PDF_PATH')} = output_pdf=C:\tmp\PVH\QEP\Target\QEP_Compared_Images.pdf (str)
+______________________________________________________________________________
+| FAIL |
+FileNotFoundError: no such file: 'C:\tmp\PVH\QEP\Pre\C:\tmp\PVH\QEP\Pre\QEP_PreScreenshots.pdf'
+------------------------------------------------------------------------------
+Tests.Test PVH Imagecompare                                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests :: Testing functionality through Robot Framework                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Replay\PVH\Output\c5cd5caa-baec-40c0-987d-e2f36ea6d0c8\pabot_results\0\Output.xml

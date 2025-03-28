@@ -1,0 +1,30 @@
+==============================================================================
+Tests :: Testing functionality through Robot Framework                        
+==============================================================================
+Tests.Test PVH Imagecompare                                                   
+==============================================================================
+Compare                                                                 
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Test_PVH_Imagecompare.robot:5
+    T:  Compare    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Test_PVH_Imagecompare.robot:6
+      Compare    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Replay\PVH\Tests\Resource\PVH_Imagecompare.robot:6
+      Compare Pdfs And Generate Report    pdf1_path=${symvar('Pre_PDF_PATH')}    pdf2_path=${symvar('Post_PDF_PATH')}    output_pdf=${symvar('Target_PDF_PATH')}
+      |  pdf1_path=${symvar('Pre_PDF_PATH')} = pdf1_path=C:\tmp\PVH\QEP\Pre (str)
+      |  pdf2_path=${symvar('Post_PDF_PATH')} = pdf2_path=C:\tmp\PVH\QEP\Post (str)
+      |  output_pdf=${symvar('Target_PDF_PATH')} = output_pdf=C:\tmp\PVH\QEP\Target\QEP_Compared_Images.pdf (str)
+______________________________________________________________________________
+| FAIL |
+FileDataError: 'C:\tmp\PVH\QEP\Pre' is no file
+------------------------------------------------------------------------------
+Tests.Test PVH Imagecompare                                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests :: Testing functionality through Robot Framework                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Replay\PVH\Output\dc3bcbf7-c1e6-4dba-a6b2-2cfa40070e70\pabot_results\0\Output.xml
