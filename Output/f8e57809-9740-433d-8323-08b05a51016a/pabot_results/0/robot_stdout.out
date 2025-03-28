@@ -1,0 +1,27 @@
+==============================================================================
+Tests :: Testing functionality through Robot Framework                        
+==============================================================================
+Tests.Test PVH-smicm                                                          
+==============================================================================
+PVH-smicm                                                             Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+Selected rows: None
+| PASS |
+------------------------------------------------------------------------------
+Tests.Test PVH-smicm                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Tests :: Testing functionality through Robot Framework                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Replay\PVH\Output\f8e57809-9740-433d-8323-08b05a51016a\pabot_results\0\Output.xml
